@@ -655,4 +655,7 @@ func main() {
 	if err := http.ListenAndServe(":8082", handler); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
+	if err := http.ListenAndServe("0.0.0.0:8082", handler); err != nil {
+		log.Fatalf("Failed to start server: %v", err)
+	}
 }
