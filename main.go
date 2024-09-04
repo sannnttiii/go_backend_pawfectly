@@ -643,7 +643,7 @@ func main() {
 	http.HandleFunc("/", handler)
 	c := cors.New(cors.Options{
 		// AllowedOrigins:   []string{"http://localhost:3000"},
-		AllowedOrigins:   []string{"https://pawfectly-beta.vercel.app", "http://ec2-3-89-232-227.compute-1.amazonaws.com"},
+		AllowedOrigins:   []string{"https://pawfectly-beta.vercel.app"},
 		AllowedMethods:   []string{"GET", "POST", "OPTIONS"},
 		AllowedHeaders:   []string{"Content-Type"},
 		AllowCredentials: true,
