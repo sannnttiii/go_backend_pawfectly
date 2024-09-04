@@ -619,7 +619,8 @@ func main() {
 	var err error
 	// conn, err = pgx.Connect(context.Background(), "postgres://postgres:postgres@localhost:5432/pawfectly")
 	// conn, err = pgx.Connect(context.Background(), "postgres://default:VEaAruPg7fk9@ep-spring-lab-a1ne9eij.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require")
-	conn, err = pgx.Connect(context.Background(), "postgres://postgres:postgres@3.89.232.227:5432/pawfectly")
+	// conn, err = pgx.Connect(context.Background(), "postgres://postgres:postgres@3.89.232.227:5432/pawfectly")
+	conn, err := pgx.Connect(context.Background(), "postgres://postgres:postgres@ec2-3-89-232-227.compute-1.amazonaws.com:5432/pawfectly")
 
 	if err != nil {
 		log.Fatalf("Unable to connect to database: %v\n", err)
